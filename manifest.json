@@ -1,28 +1,10 @@
 {
-  "name": "Social Media Framework",
-  "id": "8917498234892374891",
   "api": "1.0.0",
-  "editorType": ["figma", "figjam"],
-  "permissions": [],
-  "main": "dist/code.js",
-  "parameters": [
-    {
-      "name": "Brand",
-      "key": "brand",
-      "description": "Which brand to use",
-      "allowFreeform": false
-    },
-    {
-      "name": "Type",
-      "key": "type",
-      "description": "Which type to use",
-      "allowFreeform": false
-    },
-    {
-      "name": "Placement",
-      "key": "placement",
-      "description": "Where should the component be placed",
-      "allowFreeform": false
-    }
-  ]
+  "editorType": [
+    "figma"
+  ],
+  "id": "preact-rectangles",
+  "name": "Preact Rectangles",
+  "main": "build/main.js",
+  "ui": "build/ui.js"
 }
