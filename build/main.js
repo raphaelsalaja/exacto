@@ -81,6 +81,17 @@
     }
   });
 
+  // node_modules/@create-figma-plugin/utilities/lib/settings.js
+  async function saveSettingsAsync(settings, settingsKey = DEFAULT_SETTINGS_KEY) {
+    await figma.clientStorage.setAsync(settingsKey, settings);
+  }
+  var DEFAULT_SETTINGS_KEY;
+  var init_settings = __esm({
+    "node_modules/@create-figma-plugin/utilities/lib/settings.js"() {
+      DEFAULT_SETTINGS_KEY = "settings";
+    }
+  });
+
   // node_modules/@create-figma-plugin/utilities/lib/ui.js
   function showUI(options, data) {
     if (typeof __html__ === "undefined") {
@@ -100,7 +111,193 @@
   var init_lib = __esm({
     "node_modules/@create-figma-plugin/utilities/lib/index.js"() {
       init_events();
+      init_settings();
       init_ui();
+    }
+  });
+
+  // src/data/brands.ts
+  var brands;
+  var init_brands = __esm({
+    "src/data/brands.ts"() {
+      "use strict";
+      brands = [
+        {
+          name: "Behance",
+          variations: [
+            {
+              name: "Thumbnail",
+              dimensions: {
+                width: 808,
+                height: 632
+              }
+            },
+            {
+              name: "Post",
+              dimensions: {
+                width: 1400,
+                height: 2800
+              }
+            }
+          ]
+        },
+        {
+          name: "Chrome Webstore",
+          variations: [
+            {
+              name: "Post",
+              dimensions: {
+                width: 808,
+                height: 632
+              }
+            }
+          ]
+        },
+        {
+          name: "Dribbble",
+          variations: [
+            {
+              name: "Post",
+              dimensions: {
+                width: 808,
+                height: 632
+              }
+            }
+          ]
+        },
+        {
+          name: "Discord",
+          variations: [
+            {
+              name: "Post",
+              dimensions: {
+                width: 808,
+                height: 632
+              }
+            }
+          ]
+        },
+        {
+          name: "Facebook",
+          variations: [
+            {
+              name: "Post",
+              dimensions: {
+                width: 808,
+                height: 632
+              }
+            }
+          ]
+        },
+        {
+          name: "Github",
+          variations: [
+            {
+              name: "Post",
+              dimensions: {
+                width: 808,
+                height: 632
+              }
+            }
+          ]
+        },
+        {
+          name: "Instagram",
+          variations: [
+            {
+              name: "Post",
+              dimensions: {
+                width: 808,
+                height: 632
+              }
+            }
+          ]
+        },
+        {
+          name: "LinkedIn",
+          variations: [
+            {
+              name: "Post",
+              dimensions: {
+                width: 808,
+                height: 632
+              }
+            }
+          ]
+        },
+        {
+          name: "Pinterest",
+          variations: [
+            {
+              name: "Post",
+              dimensions: {
+                width: 808,
+                height: 632
+              }
+            }
+          ]
+        },
+        {
+          name: "Product Hunt",
+          variations: [
+            {
+              name: "Post",
+              dimensions: {
+                width: 808,
+                height: 632
+              }
+            }
+          ]
+        },
+        {
+          name: "Snapchat",
+          variations: [
+            {
+              name: "Post",
+              dimensions: {
+                width: 808,
+                height: 632
+              }
+            }
+          ]
+        },
+        {
+          name: "Twitter",
+          variations: [
+            {
+              name: "Post",
+              dimensions: {
+                width: 808,
+                height: 632
+              }
+            }
+          ]
+        },
+        {
+          name: "Tik Tok",
+          variations: [
+            {
+              name: "Post",
+              dimensions: {
+                width: 808,
+                height: 632
+              }
+            }
+          ]
+        },
+        {
+          name: "Youtube",
+          variations: [
+            {
+              name: "Post",
+              dimensions: {
+                width: 808,
+                height: 632
+              }
+            }
+          ]
+        }
+      ];
     }
   });
 
@@ -109,38 +306,82 @@
   __export(main_exports, {
     default: () => main_default
   });
-  function main_default() {
-    once("CREATE_RECTANGLES", function(count) {
-      const nodes = [];
-      for (let i = 0; i < count; i++) {
-        const rect = figma.createRectangle();
-        rect.x = i * 150;
-        rect.fills = [
-          {
-            type: "SOLID",
-            color: { r: 1, g: 0.5, b: 0 }
+  async function main_default() {
+    once("CLOSE_UI", function() {
+      figma.closePlugin();
+    });
+    once("SUBMIT", async function(settings) {
+      await saveSettingsAsync(settings);
+      console.clear();
+      const checkedBrands = Object.keys(settings).filter((key) => settings[key] === true);
+      figma.loadFontAsync({ family: "Inter", style: "Regular" }).then(() => {
+        for (const brand of brands) {
+          if (checkedBrands.includes(brand.name)) {
+            console.log(`${brand.name} is enabled`);
+            const main_container = figma.createFrame();
+            main_container.name = brand.name;
+            main_container.layoutMode = "VERTICAL";
+            main_container.itemSpacing = 64;
+            main_container.paddingLeft = 0;
+            main_container.paddingRight = 0;
+            main_container.fills = [];
+            main_container.counterAxisSizingMode = "AUTO";
+            const heading_frame = figma.createFrame();
+            heading_frame.name = "Heading";
+            heading_frame.layoutMode = "VERTICAL";
+            heading_frame.itemSpacing = 32;
+            heading_frame.paddingLeft = 0;
+            heading_frame.paddingRight = 0;
+            heading_frame.fills = [];
+            heading_frame.counterAxisSizingMode = "AUTO";
+            const heading = figma.createText();
+            heading.name = brand.name;
+            heading.characters = brand.name;
+            heading.fontSize = 64;
+            const sections_frame = figma.createFrame();
+            sections_frame.name = "Sections";
+            sections_frame.layoutMode = "HORIZONTAL";
+            sections_frame.itemSpacing = 128;
+            sections_frame.paddingLeft = 0;
+            sections_frame.paddingRight = 0;
+            sections_frame.fills = [];
+            sections_frame.counterAxisSizingMode = "AUTO";
+            for (const variation of brand.variations) {
+              const section = figma.createFrame();
+              section.name = "Section";
+              section.layoutMode = "VERTICAL";
+              section.itemSpacing = 64;
+              section.paddingLeft = 0;
+              section.paddingRight = 0;
+              section.fills = [];
+              section.counterAxisSizingMode = "AUTO";
+              const section_heading = figma.createText();
+              section_heading.name = variation.name;
+              section_heading.characters = variation.name;
+              section_heading.fontSize = 64;
+              const frame = figma.createFrame();
+              frame.name = variation.name;
+              frame.resize(variation.dimensions.width, variation.dimensions.height);
+              heading_frame.appendChild(heading);
+              section.appendChild(section_heading);
+              section.appendChild(frame);
+              sections_frame.appendChild(section);
+              main_container.appendChild(heading_frame);
+              main_container.appendChild(sections_frame);
+            }
           }
-        ];
-        figma.currentPage.appendChild(rect);
-        nodes.push(rect);
-      }
-      figma.currentPage.selection = nodes;
-      figma.viewport.scrollAndZoomIntoView(nodes);
-      figma.closePlugin();
+        }
+      }).finally(() => {
+        figma.closePlugin();
+      });
     });
-    once("CLOSE", function() {
-      figma.closePlugin();
-    });
-    showUI({
-      width: 240,
-      height: 400,
-      title: "Social Media Framework Companion"
-    });
+    showUI({ width: 240, title: "Social Media Framework Companion", height: 400 });
   }
   var init_main = __esm({
     "src/main.ts"() {
       "use strict";
       init_lib();
+      init_brands();
     }
   });
 

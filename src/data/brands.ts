@@ -1,7 +1,7 @@
 export const brands = [
 	{
 		name: 'Behance',
-		types: [
+		variations: [
 			{
 				name: 'Thumbnail',
 				dimensions: {
@@ -20,7 +20,7 @@ export const brands = [
 	},
 	{
 		name: 'Chrome Webstore',
-		types: [
+		variations: [
 			{
 				name: 'Post',
 				dimensions: {
@@ -32,7 +32,7 @@ export const brands = [
 	},
 	{
 		name: 'Dribbble',
-		types: [
+		variations: [
 			{
 				name: 'Post',
 				dimensions: {
@@ -44,7 +44,7 @@ export const brands = [
 	},
 	{
 		name: 'Discord',
-		types: [
+		variations: [
 			{
 				name: 'Post',
 				dimensions: {
@@ -56,7 +56,7 @@ export const brands = [
 	},
 	{
 		name: 'Facebook',
-		types: [
+		variations: [
 			{
 				name: 'Post',
 				dimensions: {
@@ -68,7 +68,7 @@ export const brands = [
 	},
 	{
 		name: 'Github',
-		types: [
+		variations: [
 			{
 				name: 'Post',
 				dimensions: {
@@ -80,7 +80,7 @@ export const brands = [
 	},
 	{
 		name: 'Instagram',
-		types: [
+		variations: [
 			{
 				name: 'Post',
 				dimensions: {
@@ -92,7 +92,7 @@ export const brands = [
 	},
 	{
 		name: 'LinkedIn',
-		types: [
+		variations: [
 			{
 				name: 'Post',
 				dimensions: {
@@ -104,7 +104,7 @@ export const brands = [
 	},
 	{
 		name: 'Pinterest',
-		types: [
+		variations: [
 			{
 				name: 'Post',
 				dimensions: {
@@ -116,7 +116,7 @@ export const brands = [
 	},
 	{
 		name: 'Product Hunt',
-		types: [
+		variations: [
 			{
 				name: 'Post',
 				dimensions: {
@@ -128,7 +128,7 @@ export const brands = [
 	},
 	{
 		name: 'Snapchat',
-		types: [
+		variations: [
 			{
 				name: 'Post',
 				dimensions: {
@@ -140,7 +140,7 @@ export const brands = [
 	},
 	{
 		name: 'Twitter',
-		types: [
+		variations: [
 			{
 				name: 'Post',
 				dimensions: {
@@ -152,7 +152,7 @@ export const brands = [
 	},
 	{
 		name: 'Tik Tok',
-		types: [
+		variations: [
 			{
 				name: 'Post',
 				dimensions: {
@@ -164,182 +164,7 @@ export const brands = [
 	},
 	{
 		name: 'Youtube',
-		types: [
-			{
-				name: 'Post',
-				dimensions: {
-					width: 808,
-					height: 632,
-				},
-			},
-		],
-	},
-	{
-		name: 'Behance',
-		types: [
-			{
-				name: 'Thumbnail',
-				dimensions: {
-					width: 808,
-					height: 632,
-				},
-			},
-			{
-				name: 'Post',
-				dimensions: {
-					width: 1400,
-					height: 2800,
-				},
-			},
-		],
-	},
-	{
-		name: 'Chrome Webstore',
-		types: [
-			{
-				name: 'Post',
-				dimensions: {
-					width: 808,
-					height: 632,
-				},
-			},
-		],
-	},
-	{
-		name: 'Dribbble',
-		types: [
-			{
-				name: 'Post',
-				dimensions: {
-					width: 808,
-					height: 632,
-				},
-			},
-		],
-	},
-	{
-		name: 'Discord',
-		types: [
-			{
-				name: 'Post',
-				dimensions: {
-					width: 808,
-					height: 632,
-				},
-			},
-		],
-	},
-	{
-		name: 'Facebook',
-		types: [
-			{
-				name: 'Post',
-				dimensions: {
-					width: 808,
-					height: 632,
-				},
-			},
-		],
-	},
-	{
-		name: 'Github',
-		types: [
-			{
-				name: 'Post',
-				dimensions: {
-					width: 808,
-					height: 632,
-				},
-			},
-		],
-	},
-	{
-		name: 'Instagram',
-		types: [
-			{
-				name: 'Post',
-				dimensions: {
-					width: 808,
-					height: 632,
-				},
-			},
-		],
-	},
-	{
-		name: 'LinkedIn',
-		types: [
-			{
-				name: 'Post',
-				dimensions: {
-					width: 808,
-					height: 632,
-				},
-			},
-		],
-	},
-	{
-		name: 'Pinterest',
-		types: [
-			{
-				name: 'Post',
-				dimensions: {
-					width: 808,
-					height: 632,
-				},
-			},
-		],
-	},
-	{
-		name: 'Product Hunt',
-		types: [
-			{
-				name: 'Post',
-				dimensions: {
-					width: 808,
-					height: 632,
-				},
-			},
-		],
-	},
-	{
-		name: 'Snapchat',
-		types: [
-			{
-				name: 'Post',
-				dimensions: {
-					width: 808,
-					height: 632,
-				},
-			},
-		],
-	},
-	{
-		name: 'Twitter',
-		types: [
-			{
-				name: 'Post',
-				dimensions: {
-					width: 808,
-					height: 632,
-				},
-			},
-		],
-	},
-	{
-		name: 'Tik Tok',
-		types: [
-			{
-				name: 'Post',
-				dimensions: {
-					width: 808,
-					height: 632,
-				},
-			},
-		],
-	},
-	{
-		name: 'Youtube',
-		types: [
+		variations: [
 			{
 				name: 'Post',
 				dimensions: {
@@ -359,15 +184,15 @@ export const getBrandNames = () => {
 	return brands.map((brand) => brand.name)
 }
 
-export const getBrandTypes = (brand: string) => {
+export const getBrandvariations = (brand: string) => {
 	const brandObj = getBrand(brand) || ({} as any)
-	return brandObj.types.map((type: {name: any}) => type.name)
+	return brandObj.variations.map((type: {name: any}) => type.name)
 }
 
 export const getBrandTypeDimensions = (brand: any, type: any) => {
 	const brandObj = getBrand(brand) || ({} as any)
 	console.log(brandObj)
-	const typeObj = brandObj.types.find((t: any) => t.name === type)
+	const typeObj = brandObj.variations.find((t: any) => t.name === type)
 	console.log(typeObj)
 	return typeObj.dimensions
 }

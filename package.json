@@ -21,6 +21,6 @@
 		"id": "preact-rectangles",
 		"name": "Preact Rectangles",
 		"main": "src/main.ts",
-		"ui": "src/components/social-media-framework.tsx"
+		"ui": "src/ui.ts"
 	}
 }

@@ -22,7 +22,7 @@ export default function () {
 		figma.closePlugin()
 	})
 	showUI({
-		width: 240,
+		width: 350,
 		height: 480,
 		title: 'Social Media Framework Companion',
 	})

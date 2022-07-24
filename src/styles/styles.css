@@ -165,6 +165,26 @@
 	align-items: stretch;
 	align-content: normal;
 
+	gap: var(--space-medium);
+
+	order: 2;
+	align-self: stretch;
+	flex-grow: 1;
+
+	padding: var(--space-medium);
+
+	border-top: var(--figma-color-border) solid 1px;
+}
+.support {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: normal;
+
+	gap: var(--space-medium);
+
 	order: 2;
 	align-self: stretch;
 	flex-grow: 1;

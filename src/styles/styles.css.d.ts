@@ -18,6 +18,7 @@ declare const styles: {
   readonly "header": string;
   readonly "content": string;
   readonly "footer": string;
+  readonly "support": string;
 };
 export = styles;
 
