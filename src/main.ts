@@ -1,19 +1,7 @@
-import {
-	collapseLayer,
-	emit,
-	formatErrorMessage,
-	formatSuccessMessage,
-	getSelectedNodesOrAllNodes,
-	loadSettingsAsync,
-	once,
-	saveSettingsAsync,
-	setRelaunchButton,
-	showUI,
-} from '@create-figma-plugin/utilities'
-import {CloseUIHandler, SubmitHandler, SocialMediaProps} from './utilities/types'
-import {Settings} from './utilities/settings'
+import {getSelectedNodesOrAllNodes, once, saveSettingsAsync, showUI} from '@create-figma-plugin/utilities'
 import {brands} from './data/brands'
-import main from './misc/main'
+import {Settings} from './utilities/settings'
+import {CloseUIHandler, SubmitHandler} from './utilities/types'
 
 export default async function (): Promise<void> {
 	once<CloseUIHandler>('CLOSE_UI', function () {
@@ -21,15 +9,22 @@ export default async function (): Promise<void> {
 	})
 	once<SubmitHandler>('SUBMIT', async function (settings: Settings) {
 		await saveSettingsAsync(settings)
-
-		console.clear()
+		const plugin_font = async () => {
+			await figma.loadFontAsync({family: 'Inter', style: 'Bold'})
+		}
 		const checkedBrands = Object.keys(settings).filter((key) => settings[key] === true)
-		figma
-			.loadFontAsync({family: 'Inter', style: 'Regular'})
+		plugin_font()
 			.then(() => {
+				const component_container = figma.createFrame()
+				component_container.name = 'Social Media Framework'
+				component_container.layoutMode = 'HORIZONTAL'
+				component_container.itemSpacing = 128
+				component_container.paddingLeft = 0
+				component_container.paddingRight = 0
+				component_container.fills = []
+				component_container.counterAxisSizingMode = 'AUTO'
 				for (const brand of brands) {
 					if (checkedBrands.includes(brand.name)) {
-						console.log(`${brand.name} is enabled`)
 						const main_container = figma.createFrame()
 						main_container.name = brand.name
 						main_container.layoutMode = 'VERTICAL'
@@ -50,6 +45,8 @@ export default async function (): Promise<void> {
 
 						const heading = figma.createText()
 						heading.name = brand.name
+						heading.fontName = {family: 'Inter', style: 'Bold'}
+						heading.fills = [{type: 'SOLID', color: {r: 1, g: 1, b: 1}}]
 						heading.characters = brand.name
 						heading.fontSize = 64
 
@@ -61,7 +58,7 @@ export default async function (): Promise<void> {
 						sections_frame.paddingRight = 0
 						sections_frame.fills = []
 						sections_frame.counterAxisSizingMode = 'AUTO'
-						// for each variation
+
 						for (const variation of brand.variations) {
 							const section = figma.createFrame()
 							section.name = 'Section'
@@ -74,8 +71,16 @@ export default async function (): Promise<void> {
 
 							const section_heading = figma.createText()
 							section_heading.name = variation.name
+							section_heading.fontName = {family: 'Inter', style: 'Bold'}
 							section_heading.characters = variation.name
 							section_heading.fontSize = 64
+							section_heading.fills = [{type: 'SOLID', color: {r: 1, g: 1, b: 1}}]
+
+							const divider = figma.createFrame()
+							divider.name = 'Divider'
+							divider.layoutMode = 'VERTICAL'
+							divider.counterAxisSizingMode = 'AUTO'
+							divider.resize(variation.dimensions.width, 8)
 
 							const frame = figma.createFrame()
 							frame.name = variation.name
@@ -83,13 +88,26 @@ export default async function (): Promise<void> {
 
 							heading_frame.appendChild(heading)
 							section.appendChild(section_heading)
+							section.appendChild(divider)
 							section.appendChild(frame)
 							sections_frame.appendChild(section)
 							main_container.appendChild(heading_frame)
 							main_container.appendChild(sections_frame)
 						}
+
+						// at the end of the loop, we append the main_container to the component_container
+
+						component_container.appendChild(main_container)
 					}
 				}
+				const page = figma.createPage()
+				page.appendChild(component_container)
+				figma.currentPage = page
+				page.name = '    ↳ ✨ Social Media Framework '
+			})
+			.then(() => {
+				const nodes = getSelectedNodesOrAllNodes()
+				figma.viewport.scrollAndZoomIntoView(nodes)
 			})
 			.finally(() => {
 				figma.closePlugin()

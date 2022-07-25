@@ -224,7 +224,7 @@ export var brands = [
 		],
 	},
 	{
-		name: 'LinkedIn',
+		name: 'LinkedInIn',
 		types: [
 			{
 				name: 'Post',
@@ -532,7 +532,7 @@ export var brands = [
 		],
 	},
 	{
-		name: 'LinkedIn',
+		name: 'LinkedInIn',
 		types: [
 			{
 				name: 'Post',

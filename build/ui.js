@@ -454,10 +454,10 @@
     }
   });
 
-  // C:/Users/salaj/AppData/Local/Temp/ae518322-9f6e-4f70-b4dd-4535fd5cc305/loading-indicator.js
+  // C:/Users/salaj/AppData/Local/Temp/86f333b9-e411-4790-8ede-b20a49b0292e/loading-indicator.js
   var loading_indicator_default;
   var init_loading_indicator = __esm({
-    "C:/Users/salaj/AppData/Local/Temp/ae518322-9f6e-4f70-b4dd-4535fd5cc305/loading-indicator.js"() {
+    "C:/Users/salaj/AppData/Local/Temp/86f333b9-e411-4790-8ede-b20a49b0292e/loading-indicator.js"() {
       if (document.getElementById("6382d9d1d4") === null) {
         const element = document.createElement("style");
         element.id = "6382d9d1d4";
@@ -508,10 +508,10 @@
     }
   });
 
-  // C:/Users/salaj/AppData/Local/Temp/78c9d2d7-fe90-49e4-9f4f-dacfc19c4115/button.js
+  // C:/Users/salaj/AppData/Local/Temp/da91c92a-6d47-4b3d-96ea-8f68f57d3f57/button.js
   var button_default;
   var init_button = __esm({
-    "C:/Users/salaj/AppData/Local/Temp/78c9d2d7-fe90-49e4-9f4f-dacfc19c4115/button.js"() {
+    "C:/Users/salaj/AppData/Local/Temp/da91c92a-6d47-4b3d-96ea-8f68f57d3f57/button.js"() {
       if (document.getElementById("59aaf4e5a1") === null) {
         const element = document.createElement("style");
         element.id = "59aaf4e5a1";
@@ -681,10 +681,10 @@
     }
   });
 
-  // C:/Users/salaj/AppData/Local/Temp/f93ae6d7-5ae6-403d-be77-8f58b13cb7eb/icon.js
+  // C:/Users/salaj/AppData/Local/Temp/a8c0ca2b-065f-416d-9219-37da16f912fd/icon.js
   var icon_default;
   var init_icon = __esm({
-    "C:/Users/salaj/AppData/Local/Temp/f93ae6d7-5ae6-403d-be77-8f58b13cb7eb/icon.js"() {
+    "C:/Users/salaj/AppData/Local/Temp/a8c0ca2b-065f-416d-9219-37da16f912fd/icon.js"() {
       if (document.getElementById("3534db11f8") === null) {
         const element = document.createElement("style");
         element.id = "3534db11f8";
@@ -725,10 +725,10 @@
     }
   });
 
-  // C:/Users/salaj/AppData/Local/Temp/1cabdaf8-0401-41b1-8126-63438468f7ae/checkbox.js
+  // C:/Users/salaj/AppData/Local/Temp/ee987df5-189f-4380-a5e4-e5dd470c2ce1/checkbox.js
   var checkbox_default;
   var init_checkbox = __esm({
-    "C:/Users/salaj/AppData/Local/Temp/1cabdaf8-0401-41b1-8126-63438468f7ae/checkbox.js"() {
+    "C:/Users/salaj/AppData/Local/Temp/ee987df5-189f-4380-a5e4-e5dd470c2ce1/checkbox.js"() {
       if (document.getElementById("d3e5ff0c7f") === null) {
         const element = document.createElement("style");
         element.id = "d3e5ff0c7f";
@@ -895,10 +895,10 @@
     }
   });
 
-  // C:/Users/salaj/AppData/Local/Temp/df942323-7310-4c32-86d5-b5c6a700678c/text.js
+  // C:/Users/salaj/AppData/Local/Temp/10e03f0e-4b62-4a4d-a488-4ffb2870077b/text.js
   var text_default;
   var init_text = __esm({
-    "C:/Users/salaj/AppData/Local/Temp/df942323-7310-4c32-86d5-b5c6a700678c/text.js"() {
+    "C:/Users/salaj/AppData/Local/Temp/10e03f0e-4b62-4a4d-a488-4ffb2870077b/text.js"() {
       if (document.getElementById("93869c3fd0") === null) {
         const element = document.createElement("style");
         element.id = "93869c3fd0";
@@ -1106,9 +1106,9 @@
     }
   });
 
-  // C:/Users/salaj/AppData/Local/Temp/81aa2927-2aa3-4040-bb96-a8225a3ea396/base.js
+  // C:/Users/salaj/AppData/Local/Temp/97694d74-1fd3-4830-a5dd-3b784f3c37fb/base.js
   var init_base = __esm({
-    "C:/Users/salaj/AppData/Local/Temp/81aa2927-2aa3-4040-bb96-a8225a3ea396/base.js"() {
+    "C:/Users/salaj/AppData/Local/Temp/97694d74-1fd3-4830-a5dd-3b784f3c37fb/base.js"() {
       if (document.getElementById("493f6ccd70") === null) {
         const element = document.createElement("style");
         element.id = "493f6ccd70";
@@ -1243,10 +1243,10 @@ svg {
     }
   });
 
-  // C:/Users/salaj/AppData/Local/Temp/c5824a9e-c455-40ab-8887-dac4e2f25466/styles.js
+  // C:/Users/salaj/AppData/Local/Temp/e1274f70-0319-491f-99ed-74fc091b5a66/styles.js
   var styles_default;
   var init_styles = __esm({
-    "C:/Users/salaj/AppData/Local/Temp/c5824a9e-c455-40ab-8887-dac4e2f25466/styles.js"() {
+    "C:/Users/salaj/AppData/Local/Temp/e1274f70-0319-491f-99ed-74fc091b5a66/styles.js"() {
       if (document.getElementById("15d609d962") === null) {
         const element = document.createElement("style");
         element.id = "15d609d962";
@@ -1459,17 +1459,17 @@ svg {
       close: function() {
         emit("CLOSE_UI");
       },
-      submit: function({ loading, Behance: Behance2, ChromeWebStore: ChromeWebStore2, Dribbble: Dribbble2, Discord: Discord2, Facebook: Facebook2, Github: Github2, Instagram: Instagram2, Linked: Linked2, Pinterest: Pinterest2, Product: Product2, Snapchat: Snapchat2, Twitter: Twitter2, Twitch: Twitch2, TikTok: TikTok2, Youtube: Youtube2 }) {
+      submit: function({ loading, Behance: Behance2, Webstore: Webstore2, Dribbble: Dribbble2, Discord: Discord2, Facebook: Facebook2, Github: Github2, Instagram: Instagram2, LinkedIn: LinkedIn2, Pinterest: Pinterest2, Product: Product2, Snapchat: Snapchat2, Twitter: Twitter2, Twitch: Twitch2, TikTok: TikTok2, Youtube: Youtube2 }) {
         setFormState(loading, "loading");
         emit("SUBMIT", {
           Behance: Behance2,
-          ChromeWebStore: ChromeWebStore2,
+          Webstore: Webstore2,
           Dribbble: Dribbble2,
           Discord: Discord2,
           Facebook: Facebook2,
           Github: Github2,
           Instagram: Instagram2,
-          Linked: Linked2,
+          LinkedIn: LinkedIn2,
           Pinterest: Pinterest2,
           Product: Product2,
           Snapchat: Snapchat2,
@@ -1479,11 +1479,11 @@ svg {
           Youtube: Youtube2
         });
       },
-      validate: function({ Behance: Behance2, ChromeWebStore: ChromeWebStore2, Dribbble: Dribbble2, Discord: Discord2, Facebook: Facebook2, Github: Github2, Instagram: Instagram2, Linked: Linked2, Pinterest: Pinterest2, Product: Product2, Snapchat: Snapchat2, Twitter: Twitter2, Twitch: Twitch2, TikTok: TikTok2, Youtube: Youtube2 }) {
-        return Behance2 === true || ChromeWebStore2 === true || Dribbble2 === true || Discord2 === true || Facebook2 === true || Github2 === true || Instagram2 === true || Linked2 === true || Pinterest2 === true || Product2 === true || Snapchat2 === true || Twitter2 === true || Twitch2 === true || TikTok2 === true || Youtube2 === true;
+      validate: function({ Behance: Behance2, Webstore: Webstore2, Dribbble: Dribbble2, Discord: Discord2, Facebook: Facebook2, Github: Github2, Instagram: Instagram2, LinkedIn: LinkedIn2, Pinterest: Pinterest2, Product: Product2, Snapchat: Snapchat2, Twitter: Twitter2, Twitch: Twitch2, TikTok: TikTok2, Youtube: Youtube2 }) {
+        return Behance2 === true || Webstore2 === true || Dribbble2 === true || Discord2 === true || Facebook2 === true || Github2 === true || Instagram2 === true || LinkedIn2 === true || Pinterest2 === true || Product2 === true || Snapchat2 === true || Twitter2 === true || Twitch2 === true || TikTok2 === true || Youtube2 === true;
       }
     });
-    const { Behance, ChromeWebStore, Dribbble, Discord, Facebook, Github, Instagram, Linked, Pinterest, Product, Snapchat, Twitter, Twitch, TikTok, Youtube } = formState;
+    const { Behance, Webstore, Dribbble, Discord, Facebook, Github, Instagram, LinkedIn, Pinterest, Product, Snapchat, Twitter, Twitch, TikTok, Youtube } = formState;
     return /* @__PURE__ */ h("div", {
       class: styles_default.root
     }, /* @__PURE__ */ h("div", {
@@ -1495,10 +1495,10 @@ svg {
       onValueChange: setFormState,
       value: Behance
     }, /* @__PURE__ */ h(Text, null, " Behance ")), /* @__PURE__ */ h(Checkbox, {
-      name: "ChromeWebStore",
+      name: "Webstore",
       onValueChange: setFormState,
-      value: ChromeWebStore
-    }, /* @__PURE__ */ h(Text, null, " Chrome Web Store ")), /* @__PURE__ */ h(Checkbox, {
+      value: Webstore
+    }, /* @__PURE__ */ h(Text, null, " Chrome Webstore ")), /* @__PURE__ */ h(Checkbox, {
       name: "Dribbble",
       onValueChange: setFormState,
       value: Dribbble
@@ -1519,10 +1519,10 @@ svg {
       onValueChange: setFormState,
       value: Instagram
     }, /* @__PURE__ */ h(Text, null, " Instagram ")), /* @__PURE__ */ h(Checkbox, {
-      name: "Linked",
+      name: "LinkedIn",
       onValueChange: setFormState,
-      value: Linked
-    }, /* @__PURE__ */ h(Text, null, " Linked ")), /* @__PURE__ */ h(Checkbox, {
+      value: LinkedIn
+    }, /* @__PURE__ */ h(Text, null, " LinkedIn ")), /* @__PURE__ */ h(Checkbox, {
       name: "Pinterest",
       onValueChange: setFormState,
       value: Pinterest

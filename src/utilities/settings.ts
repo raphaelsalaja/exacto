@@ -1,12 +1,12 @@
 export type Settings = {
 	Behance: boolean
-	ChromeWebStore: boolean
+	Webstore: boolean
 	Dribbble: boolean
 	Discord: boolean
 	Facebook: boolean
 	Github: boolean
 	Instagram: boolean
-	Linked: boolean
+	LinkedIn: boolean
 	Pinterest: boolean
 	Product: boolean
 	Snapchat: boolean

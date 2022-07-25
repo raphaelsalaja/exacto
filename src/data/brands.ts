@@ -19,7 +19,7 @@ export const brands = [
 		],
 	},
 	{
-		name: 'Chrome Webstore',
+		name: 'Webstore',
 		variations: [
 			{
 				name: 'Post',
@@ -91,7 +91,7 @@ export const brands = [
 		],
 	},
 	{
-		name: 'LinkedIn',
+		name: 'LinkedInIn',
 		variations: [
 			{
 				name: 'Post',
