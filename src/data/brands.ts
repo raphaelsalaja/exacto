@@ -283,6 +283,38 @@ export const brands = [
 		] as any,
 	},
 	{
+		name: 'Gumroad',
+		variations: [
+			{
+				name: 'Thumbnail',
+				dimensions: {
+					width: 600,
+					height: 600,
+				},
+			},
+			{
+				name: 'Cover',
+				dimensions: {
+					width: 1280,
+					height: 720,
+				},
+			},
+		],
+		fill: [
+			{
+				type: 'SOLID',
+				visible: true,
+				opacity: 1,
+				blendMode: 'NORMAL',
+				color: {
+					r: 0.09019608050584793,
+					g: 0.08235294371843338,
+					b: 0.08235294371843338,
+				},
+			},
+		] as any,
+	},
+	{
 		name: 'Instagram',
 		variations: [
 			{

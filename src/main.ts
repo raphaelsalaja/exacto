@@ -4,6 +4,7 @@ import {Settings} from './utilities/settings'
 import {CloseUIHandler, SubmitHandler} from './utilities/types'
 import {youtube} from './components/misc/youtube'
 import {_figma} from './components/misc/figma'
+import {gumroad} from './components/misc/gumroad'
 
 export default async function (): Promise<void> {
 	once<CloseUIHandler>('CLOSE_UI', function () {
@@ -125,6 +126,9 @@ export default async function (): Promise<void> {
 							} else if (brand.name == 'Figma' && variation.name == 'Cover Art') {
 								frame.remove()
 								_figma(section)
+							} else if (brand.name == 'Gumroad' && variation.name == 'Thumbnail') {
+								frame.remove()
+								gumroad(section)
 							} else {
 								section.appendChild(frame)
 								frame.exportSettings = [{format: 'PNG', suffix: '', contentsOnly: true, constraint: {type: 'SCALE', value: 1}}]
