@@ -1,7 +1,6 @@
 import {Button, Checkbox, Text, useForm} from '@create-figma-plugin/ui'
-import {emit, on} from '@create-figma-plugin/utilities'
+import {emit} from '@create-figma-plugin/utilities'
 import {h, JSX} from 'preact'
-import {useEffect} from 'preact/hooks'
 import styles from '../styles/styles.css'
 import {CloseUIHandler, FormState, SocialMediaProps, SubmitHandler} from '../utilities/types'
 
@@ -12,19 +11,21 @@ export function SocialMedia(props: SocialMediaProps): JSX.Element {
 			close: function () {
 				emit<CloseUIHandler>('CLOSE_UI')
 			},
-			submit: function ({loading, Behance, Webstore, Dribbble, Discord, Facebook, Github, Instagram, LinkedIn, Pinterest, Product, Snapchat, Twitter, Twitch, TikTok, Youtube}: FormState) {
+			submit: function ({loading, Behance, ChromeWebstore, Dribbble, Discord, Facebook, Figma, Github, Gumroad, Instagram, LinkedIn, Pinterest, ProductHunt, Snapchat, Twitter, Twitch, TikTok, Youtube}: FormState) {
 				setFormState(loading, 'loading')
 				emit<SubmitHandler>('SUBMIT', {
 					Behance,
-					Webstore,
+					ChromeWebstore,
 					Dribbble,
 					Discord,
 					Facebook,
+					Figma,
 					Github,
+					Gumroad,
 					Instagram,
 					LinkedIn,
 					Pinterest,
-					Product,
+					ProductHunt,
 					Snapchat,
 					Twitter,
 					Twitch,
@@ -32,38 +33,25 @@ export function SocialMedia(props: SocialMediaProps): JSX.Element {
 					Youtube,
 				})
 			},
-			validate: function ({Behance, Webstore, Dribbble, Discord, Facebook, Github, Instagram, LinkedIn, Pinterest, Product, Snapchat, Twitter, Twitch, TikTok, Youtube}: FormState) {
-				return (
-					Behance === true ||
-					Webstore === true ||
-					Dribbble === true ||
-					Discord === true ||
-					Facebook === true ||
-					Github === true ||
-					Instagram === true ||
-					LinkedIn === true ||
-					Pinterest === true ||
-					Product === true ||
-					Snapchat === true ||
-					Twitter === true ||
-					Twitch === true ||
-					TikTok === true ||
-					Youtube === true
-				)
+			validate: function ({Behance, ChromeWebstore, Dribbble, Discord, Facebook, Figma, Github, Gumroad, Instagram, LinkedIn, Pinterest, ProductHunt, Snapchat, Twitter, Twitch, TikTok, Youtube}: FormState) {
+				return Behance === true || ChromeWebstore === true || Dribbble === true || Discord === true || Facebook === true || Figma === true || Github === true || Gumroad === true || Instagram === true || LinkedIn === true || Pinterest === true || ProductHunt === true || Snapchat === true || Twitter === true || Twitch === true || TikTok === true || Youtube === true
 			},
 		}
 	)
-	const {Behance, Webstore, Dribbble, Discord, Facebook, Github, Instagram, LinkedIn, Pinterest, Product, Snapchat, Twitter, Twitch, TikTok, Youtube} = formState
+	const {Behance, ChromeWebstore, Dribbble, Discord, Facebook, Figma, Github, Gumroad, Instagram, LinkedIn, Pinterest, ProductHunt, Snapchat, Twitter, Twitch, TikTok, Youtube} = formState
 	return (
 		<div class={styles.root}>
 			<div class={styles.header}>
-				<span>Pick a platform to get started</span>
+				<div class={styles['header-container']}>
+					<span class={styles.bold}>Welcome to Exacto!</span>
+					<span>Choose your desired brands below.</span>
+				</div>
 			</div>
 			<div class={styles.content}>
 				<Checkbox name='Behance' onValueChange={setFormState} value={Behance}>
 					<Text> Behance </Text>
 				</Checkbox>
-				<Checkbox name='Webstore' onValueChange={setFormState} value={Webstore}>
+				<Checkbox name='ChromeWebstore' onValueChange={setFormState} value={ChromeWebstore}>
 					<Text> Chrome Webstore </Text>
 				</Checkbox>
 				<Checkbox name='Dribbble' onValueChange={setFormState} value={Dribbble}>
@@ -75,8 +63,14 @@ export function SocialMedia(props: SocialMediaProps): JSX.Element {
 				<Checkbox name='Facebook' onValueChange={setFormState} value={Facebook}>
 					<Text> Facebook </Text>
 				</Checkbox>
+				<Checkbox name='Figma' onValueChange={setFormState} value={Figma}>
+					<Text> Figma </Text>
+				</Checkbox>
 				<Checkbox name='Github' onValueChange={setFormState} value={Github}>
 					<Text> Github </Text>
+				</Checkbox>
+				<Checkbox name='Gumroad' onValueChange={setFormState} value={Gumroad}>
+					<Text> Gumroad </Text>
 				</Checkbox>
 				<Checkbox name='Instagram' onValueChange={setFormState} value={Instagram}>
 					<Text> Instagram </Text>
@@ -87,17 +81,32 @@ export function SocialMedia(props: SocialMediaProps): JSX.Element {
 				<Checkbox name='Pinterest' onValueChange={setFormState} value={Pinterest}>
 					<Text> Pinterest </Text>
 				</Checkbox>
-				<Checkbox name='Product' onValueChange={setFormState} value={Product}>
-					<Text> Product </Text>
+				<Checkbox name='ProductHunt' onValueChange={setFormState} value={ProductHunt}>
+					<Text> Product Hunt </Text>
 				</Checkbox>
 				<Checkbox name='Snapchat' onValueChange={setFormState} value={Snapchat}>
 					<Text> Snapchat </Text>
+				</Checkbox>
+				<Checkbox name='Twitter' onValueChange={setFormState} value={Twitter}>
+					<Text> Twitter </Text>
+				</Checkbox>
+				<Checkbox name='Twitch' onValueChange={setFormState} value={Twitch}>
+					<Text> Twitch </Text>
+				</Checkbox>
+				<Checkbox name='TikTok' onValueChange={setFormState} value={TikTok}>
+					<Text> Tik Tok </Text>
+				</Checkbox>
+				<Checkbox name='Youtube' onValueChange={setFormState} value={Youtube}>
+					<Text> Youtube </Text>
 				</Checkbox>
 			</div>
 			<div class={styles.footer}>
 				<Button {...initialFocus} disabled={disabled === true} fullWidth onClick={handleSubmit}>
 					Build Frames
 				</Button>
+				<span class={styles.support}>
+					Created with love by <a href='https://twitter.com/raf_underscore'>Raphael S</a>
+				</span>
 			</div>
 		</div>
 	)
