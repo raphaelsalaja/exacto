@@ -19,7 +19,7 @@
 			"figma"
 		],
 		"id": "1134091253154887126",
-		"name": "Exacto - Social Media Frameworks",
+		"name": "Exacto",
 		"main": "src/main.ts",
 		"ui": "src/ui.ts"
 	}

@@ -152,3 +152,6 @@ a {
 	text-decoration: underline;
 	color: var(--figma-color-text-brand);
 }
+a span {
+	cursor: pointer;
+}

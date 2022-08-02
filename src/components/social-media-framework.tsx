@@ -104,9 +104,12 @@ export function SocialMedia(props: SocialMediaProps): JSX.Element {
 				<Button {...initialFocus} disabled={disabled === true} fullWidth onClick={handleSubmit}>
 					Build Frames
 				</Button>
-				<span class={styles.support}>
-					Created with love by <a href='https://twitter.com/raf_underscore'>Raphael S</a>
-				</span>
+				<div class={styles.support}>
+					Created with love by{' '}
+					<a href={`https://twitter.com/raf_underscore`} rel='noreferrer' tabIndex={0} target='_blank'>
+						<span>Raphael S</span>
+					</a>
+				</div>
 			</div>
 		</div>
 	)
