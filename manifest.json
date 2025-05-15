@@ -6,5 +6,11 @@
   "id": "1134091253154887126",
   "name": "Exacto",
   "main": "build/main.js",
+  "documentAccess": "dynamic-page",
+  "networkAccess": {
+    "allowedDomains": [
+      "none"
+    ]
+  },
   "ui": "build/ui.js"
 }
