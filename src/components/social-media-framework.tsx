@@ -105,9 +105,9 @@ export function SocialMedia(props: SocialMediaProps): JSX.Element {
 					Build Frames
 				</Button>
 				<div class={styles.support}>
-					Created with love by{' '}
-					<a href={`https://twitter.com/raf_underscore`} rel='noreferrer' tabIndex={0} target='_blank'>
-						<span>Raphael S</span>
+					Created by{' '}
+					<a href={`https://twitter.com/raphaelsalaja`} rel='noreferrer' tabIndex={0} target='_blank'>
+						<span>Raphael Salaja</span>
 					</a>
 				</div>
 			</div>
